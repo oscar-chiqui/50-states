@@ -10,6 +10,14 @@
             <input class="visit-state" type="checkbox" v-model="visited" v-on:change="visitedChanged">
         </div>
 
+        <div>
+            <!-- /We choose the map and state for the map and state as selected on the checkbox -->
+            <router-link v-bind:to="{name: 'StateMap', params: {state: state.name }}">
+                <img class="map-icon" src="@/assets/icons8-map-marker-94.png">
+            </router-link>
+
+        </div>
+
     </div>
 
 </template>
@@ -49,6 +57,11 @@ export default {
 
 .visit-state {
     margin: 1rem;
+}
+
+.map-icon {
+    width: 4rem;
+    height: 4rem;
 }
 
 </style>
