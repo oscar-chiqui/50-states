@@ -3,7 +3,8 @@
 
         <p>There are a total of  {{ states.length }} states and the District of Columbia </p>
         <p>You have visited {{ totalVisited }} {{units}}</p>
-
+        
+<!-- display message if all states are visited -->
         <p id="all-visited-message" v-if="areAllVisited">You have visited all the states and the District of Columbia!</p>
  
     </div>
